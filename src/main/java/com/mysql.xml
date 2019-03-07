@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+      <name>mysql.lzy.number</name>
+      <value>10</value>
+    </property>
+
+	<property>
+	  <name>mysql.lzy.driver</name>
+	  <value>com.mysql.jdbc.Driver</value>
+	</property>
+
+	<property>
+	  <name>mysql.lzy.url</name>
+	  <value>jdbc:mysql://linux003:3306/log?useUnicode=true&amp;characterEncoding=utf8</value>
+	</property>	
+
+	<property>
+	  <name>mysql.lzy.username</name>
+	  <value>root</value>
+	</property>	
+
+	<property>
+	  <name>mysql.lzy.password</name>
+	  <value>123</value>
+	</property>	
+</configuration>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>add_user</name>
+		<value>
+		  INSERT INTO `stats_user`(
+		    `platform_id`,
+		    `date_id`,
+		    `new_add_users`,
+		    `created`)
+		  VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_add_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>browser_add_user</name>
+		<value>
+		  INSERT INTO `stats_device_browser`(
+		    `platform_id`,
+		    `date_id`,
+		    `browser_id`,
+		    `new_add_users`,
+		    `created`)
+		  VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_add_users` = ?
+		</value>
+	</property>
+	
+	<property>
+		<name>active_user</name>
+		<value>
+		  INSERT INTO `stats_user`(
+		    `platform_id`,
+		    `date_id`,
+		    `active_users`,
+		    `created`)
+		  VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `active_users` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>browser_active_user</name>
+		<value>
+		  INSERT INTO `stats_device_browser`(
+		    `platform_id`,
+		    `date_id`,
+		    `browser_id`,
+		    `active_users`,
+		    `created`
+		  ) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `active_users` = ?
+		</value>
+	</property>
+
+
+	<property>
+		<name>active_member</name>
+		<value>
+			INSERT INTO `stats_user` (
+			`platform_dimension_id`,
+			`date_dimension_id`,
+			`active_members`,
+			`created`
+			) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `active_members` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>browser_active_member</name>
+		<value>
+			INSERT INTO `stats_device_browser`(
+			`platform_dimension_id`,
+			`date_dimension_id`,
+			`browser_dimension_id`,
+			`active_members`,
+			`created`
+			) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `active_members` = ?
+		</value>
+	</property>
+
+	<property>
+		<name>new_member</name>
+		<value>
+			INSERT INTO `stats_user` (
+			`platform_id`,
+			`date_id`,
+			`new_members`,
+			`created`
+			) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_members` = ?
+		</value>
+	</property>
+	<property>
+		<name>browser_new_member</name>
+		<value>
+			INSERT INTO `stats_device_browser` (
+			`platform_id`,
+			`date_id`,
+			`browser_id`,
+			`new_members`,
+			`created`
+			) VALUES (?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `new_members` = ?
+		</value>
+	</property>
+	<property>
+		<name>insert_member_info</name>
+		<value>
+			INSERT INTO `member_info`(
+			`member_id`,
+			`last_visit_date`,
+			`created`
+			) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE `last_visit_date` = ?
+		</value>
+	</property>
+	<property>
+		<name>website_pageview</name>
+		<value>
+			INSERT INTO `stats_device_browser`(
+			`platform_id`,
+			`date_id`,
+			`browser_id`,
+			`pv`,
+			`created`
+			) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `pv` = ?
+		</value>
+	</property>
+	<property>
+		<name>location</name>
+		<value>
+			INSERT INTO `stats_device_location`(
+			`platform_id`,
+			`date_id`,
+			`location_id`,
+			`active_users`,
+			`sessions`,
+			`bounce_sessions`,
+			`created`
+			) VALUES(?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE
+			`active_users`=?, `sessions`=?, `bounce_sessions`=?
+		</value>
+	</property>
+
+</configuration>

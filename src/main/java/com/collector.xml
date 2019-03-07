@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>add_user</name>
+		<value>com.analysis.adduser.AddUserCollector</value>
+	</property>
+	<property>
+		<name>active_user</name>
+		<value>com.analysis.activeUser.ActiveUserCollector</value>
+	</property>
+	<property>
+		<name>browser_active_user</name>
+		<value>com.analysis.activeUser.ActiveUserBrowserCollector</value>
+	</property>
+	<property>
+		<name>active_mem</name>
+		<value>com.analysis.activemem.ActiveMemCollector</value>
+	</property>
+	<property>
+		<name>new_member</name>
+		<value>com.analysis.addmem.AddMemCollector</value>
+	</property>
+	<property>
+		<name>location</name>
+		<value>com.analysis.location.LocationCollector</value>
+	</property>
+	<property>
+		<name>location</name>
+		<value>com.analysis.pv.PageViewCollector</value>
+	</property>
+</configuration>
