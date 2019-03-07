@@ -1,0 +1,13 @@
+1.数据源：页面埋点，java
+2.flume：监控nginx日志文件，输出到hdfs，按天
+3.用mr完成etl，输出到hbase
+4.hbase查数据，mr分析，输出到mysql
+5.分析内容：新增用户、新增会员、活跃用户、活跃会员、pv、地址
+6.包：
+    analysis：分析主体，mr
+    common：公共包，主要是常量字符串
+    dataproducer:java生成数据
+    etl：mr数据清洗
+    pojo：输出类型实体，与mysql对应
+    util：用到的工具类
+    webapp：页面和js
